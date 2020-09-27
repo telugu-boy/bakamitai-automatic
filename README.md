@@ -11,7 +11,7 @@ Nvidia GPU (optional)
   3. Execute `bash ./start.sh`
   4. Wait for packages to install. Torch takes especially long.
   5. Answer the Nvidia GPU presence prompt.
-  6. Wait for `result.mp4` to be generated in the directory that you cloned the project.
+  6. Wait for `result.mp4` to be generated in the directory that `start.sh` was executed in.
   7. Enjoy
 
 ### Cleanup
