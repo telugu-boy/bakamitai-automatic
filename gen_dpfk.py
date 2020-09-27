@@ -1,12 +1,8 @@
-no_nvidia_gpu = input("Is an Nvidia GPU present? y/N: ").strip().lower() == 'n'
-
-if no_nvidia_gpu:
-    print("Using CPU for further calculations... (this will be much slower)")
-
 import sys
 
 sys.path.append('first-order-model/')
 
+import os
 import imageio
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,6 +15,11 @@ warnings.filterwarnings("ignore")
 import demo
 
 if not os.path.isfile("generated.mp4"):
+    no_nvidia_gpu = input("Is an Nvidia GPU present? y/N: ").strip().lower() == 'n'
+
+    if no_nvidia_gpu:
+        print("Using CPU for further calculations... (this will be much slower)")
+    
     print("Reading template and input image...")
 
     source_image = imageio.imread('../input_image.png')
