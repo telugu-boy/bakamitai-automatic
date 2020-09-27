@@ -15,4 +15,4 @@ Nvidia GPU (optional)
   7. Enjoy
 
 ### Cleanup
-  * You are free to delete working-dir, but this is equivalent to cloning the repository and setting `input_image.png`.
+  * You are free to delete `working-dir`, but this is equivalent to cloning the repository and setting `input_image.png`.
