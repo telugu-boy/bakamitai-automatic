@@ -18,24 +18,27 @@ warnings.filterwarnings("ignore")
 
 import demo
 
-print("Reading template and input image...")
+if not os.path.isfile("generated.mp4"):
+    print("Reading template and input image...")
 
-source_image = imageio.imread('../input_image.png')
-driving_video = imageio.mimread('bakamitai_template.mp4')
+    source_image = imageio.imread('../input_image.png')
+    driving_video = imageio.mimread('bakamitai_template.mp4')
 
-#Resize image and video to 256x256
+    #Resize image and video to 256x256
 
-print("Resizing inputs...")
+    print("Resizing inputs...")
 
-source_image = resize(source_image, (256, 256))[..., :3]
-driving_video = [resize(frame, (256, 256))[..., :3] for frame in driving_video]
+    source_image = resize(source_image, (256, 256))[..., :3]
+    driving_video = [resize(frame, (256, 256))[..., :3] for frame in driving_video]
 
-print("Generating video... (this may take a while)")
+    print("Generating video... (this may take a while)")
 
-generator, kp_detector = demo.load_checkpoints(config_path='first-order-model/config/vox-256.yaml', checkpoint_path='vox-cpk.pth.tar', cpu=no_nvidia_gpu)
+    generator, kp_detector = demo.load_checkpoints(config_path='first-order-model/config/vox-256.yaml', checkpoint_path='vox-cpk.pth.tar', cpu=no_nvidia_gpu)
 
-predictions = demo.make_animation(source_image, driving_video, generator, kp_detector, relative=True, cpu=no_nvidia_gpu)
+    predictions = demo.make_animation(source_image, driving_video, generator, kp_detector, relative=True, cpu=no_nvidia_gpu)
 
-print("Saving video...")
+    print("Saving video...")
 
-imageio.mimsave('generated.mp4', [img_as_ubyte(frame) for frame in predictions])
+    imageio.mimsave('generated.mp4', [img_as_ubyte(frame) for frame in predictions])
+else:
+    print("File named 'generated.mp4' already exists. Continuing.")
