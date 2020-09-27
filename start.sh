@@ -25,11 +25,11 @@ python3 ../gen_dpfk.py
 
 printf "Speeding up video...\n"
 #speed up 3x while keeping frames
-ffmpeg -hide_banner -loglevel error -i generated.mp4 -vcodec h264 -an -vf "fps=60, setpts=(1/3)*PTS" temp_poop.mp4
+ffmpeg -hide_banner -loglevel error -y -i generated.mp4 -vcodec h264 -an -vf "fps=60, setpts=(1/3)*PTS" temp_poop.mp4
 
 printf "Applying audio...\n"
 #apply audio.
-ffmpeg -hide_banner -loglevel error -i temp_poop.mp4 -i dmdn.mp3 -c:a copy -c:v copy ../result.mp4
+ffmpeg -hide_banner -loglevel error -y -i temp_poop.mp4 -i dmdn.mp3 -c:a copy -c:v copy ../result.mp4
 
 #remove temporary fille
 rm temp_poop.mp4
