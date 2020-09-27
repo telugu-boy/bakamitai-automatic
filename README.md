@@ -14,5 +14,5 @@ Nvidia GPU (optional)
   6. Wait for `result.mp4` to be generated in the directory that you cloned the project.
   7. Enjoy
 
-# Cleanup
+### Cleanup
   * You are free to delete working-dir, but this is equivalent to cloning the repository and setting `input_image.png`.
