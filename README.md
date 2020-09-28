@@ -11,7 +11,7 @@ Automatic baka mitai generator
  5. Replace `input_image.png` with desired image. Cropping to face is desired.
  6. Press run on the last button.
  7. Answer the Nvidia GPU presence prompt with `y`.
- 8. Check the same folder that you navigated to in step 5 for `result.mp4`.
+ 8. Check the same folder that you navigated to in step 4 for `result.mp4`.
 
 ## Local (slower)
   ## Prerequisites
