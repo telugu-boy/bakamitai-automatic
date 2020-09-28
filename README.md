@@ -2,7 +2,7 @@
 Automatic baka mitai generator
 
 ## Google Colab (faster)
- 1. https://colab.research.google.com/drive/17OLT9-WrHyLZvEZvf_ucuQF_Nx9JsSJH?usp=sharing
+ 1. https://colab.research.google.com/drive/1kUKt-MJ8ThEkqWsiLwRmEJOIdwqwbzyr?usp=sharing
  2. Ensure the runtime type is `GPU`.
  3. Press run on each button **except the last one**, in order.
     * Wait for previous execution to finish before pressing the next button.
