@@ -31,7 +31,7 @@ Generates a Baka Mitai meme from an input image
   * If Google Colab refuses to `cd`, factory reset the runtime. `Runtime -> Factory reset runtime`.
    
 ## Repetition
-To repeat the process, delete `generated.mp4` in `working-dir`. Replace `input_image.png` with another image and
+To repeat the process, delete `generated.mp4` in `working-dir` (or click the **last** run button in Colab). Replace `input_image.png` with another image and
   * Colab: press the button that runs `start.sh`.
   * Local: run `start.sh` or `start.bat` if on Windows.
 
