@@ -28,7 +28,9 @@ Automatic baka mitai generator
    7. Enjoy
    
 ## Repetition
-To repeat the process, delete `generated.mp4` in `working-dir`. Replace `input_image.png` with another image and run `start.sh` or `start.bat`.
+To repeat the process, delete `generated.mp4` in `working-dir`. Replace `input_image.png` with another image and
+  * Colab: press the last button that runs `start.sh`.
+  * Local: run `start.sh` or `start.bat` if on Windows.
 
 ### Cleanup
   * You are free to delete `working-dir`, but this is equivalent to cloning the repository and setting `input_image.png`.
