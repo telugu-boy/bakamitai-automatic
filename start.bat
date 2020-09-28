@@ -4,10 +4,9 @@ cd "working-dir"
 
 echo "Creating venv..."
 python -m venv venv
-source venv\Scripts\activate.bat
 
 echo "Installing packages to venv..."
-python -m pip install -q PyYAML==5.3.1 beautifulsoup4 requests imageio matplotlib numpy pandas scikit-image scikit-learn torch torchvision imageio-ffmpeg tqdm
+venv\Scripts\pip install -q PyYAML==5.3.1 beautifulsoup4 requests imageio matplotlib numpy pandas scikit-image scikit-learn imageio-ffmpeg tqdm
+venv\Scripts\pip install -q --timeout 1000 torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
 
-python ../generate.py
- 
+venv\Scripts\python ../generate.py
