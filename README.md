@@ -31,4 +31,4 @@ Automatic baka mitai generator
   * You are free to delete `working-dir`, but this is equivalent to cloning the repository and setting `input_image.png`.
   * You can delete small files like `bakamitai_template.mp4`, `dmdn.mp3` or `generated.mp4`.
   * It is advisable to keep `venv` and `vox-cpk.pth.tar` as they are large and may take more time to redownload.
-    * `venv` may not be present on Google Colab. In this case, 
+    * `venv` may not be present on Google Colab. Ignore this step if so.
