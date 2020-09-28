@@ -10,7 +10,7 @@ Automatic baka mitai generator
  4. Navigate to the folder named `bakamitai-automatic` in your Google Drive.
  5. Replace `input_image.png` with desired image. Cropping to face is desired.
  6. Press run on the last button.
- 7. Answer the Nvidia GPU presence prompt.
+ 7. Answer the Nvidia GPU presence prompt with `y`.
  8. Check the folder named `bakamitai-automatic` in your Google Drive for `result.mp4`.
 
 ## Local (slower)
