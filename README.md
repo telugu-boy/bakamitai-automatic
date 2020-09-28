@@ -1,9 +1,9 @@
 # bakamitai-automatic
-automatic baka mitai generator
+Automatic baka mitai generator
 
 ## Prerequisites
-Linux with `ffmpeg` and `python3` (version 3.7 or above) installed
-Nvidia GPU (optional)
+  * Linux with `git`, `ffmpeg` and `python3` (version 3.7 or above) installed
+  * Nvidia GPU (optional)
 
 ## Running the program
   1. Clone the repository.
@@ -15,4 +15,4 @@ Nvidia GPU (optional)
   7. Enjoy
 
 ### Cleanup
-  * You are free to delete working-dir, but this is equivalent to cloning the repository and setting `input_image.png`.
+  * You are free to delete `working-dir`, but this is equivalent to cloning the repository and setting `input_image.png`.
