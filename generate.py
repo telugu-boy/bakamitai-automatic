@@ -26,7 +26,7 @@ import demo
 
 def download_fille(url, filename):
     cs = 1024
-    req = requests.get(url, stream=True)
+    req = requests.get(url, stream=True, allow_redirects=True)
     with open(filename, 'wb') as f:
         prog = tqdm.tqdm(unit="B", total=int(req.headers['Content-Length'] ))
         for chunk in req.iter_content(chunk_size=cs): 
