@@ -26,6 +26,9 @@ Automatic baka mitai generator
    5. Answer the Nvidia GPU presence prompt.
    6. Wait for `result.mp4` to be generated in the directory that `start.sh` was executed in.
    7. Enjoy
+ 
+## Issues
+  * If Google Colab refuses to `cd`, factory reset the runtime. `Runtime -> Factory reset runtime`.
    
 ## Repetition
 To repeat the process, delete `generated.mp4` in `working-dir`. Replace `input_image.png` with another image and
