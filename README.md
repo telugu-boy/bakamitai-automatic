@@ -9,7 +9,7 @@ Automatic baka mitai generator
     * Ignore non-fatal warnings or errors. Report fatal errors via the Issues tab.
  4. Navigate to the folder named `bakamitai-automatic` in your Google Drive.
  5. Replace `input_image.png` with desired image. Cropping to face is desired.
- 6. Press run on the last button.
+ 6. Press run on the **second last** button.
  7. Answer the Nvidia GPU presence prompt with `y`.
  8. Check the same folder that you navigated to in step 4 for `result.mp4`.
 
@@ -32,7 +32,7 @@ Automatic baka mitai generator
    
 ## Repetition
 To repeat the process, delete `generated.mp4` in `working-dir`. Replace `input_image.png` with another image and
-  * Colab: press the last button that runs `start.sh`.
+  * Colab: press the button that runs `start.sh`.
   * Local: run `start.sh` or `start.bat` if on Windows.
 
 ### Cleanup
