@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from skimage.transform import resize
 from skimage import img_as_ubyte
+import tqdm
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -22,6 +23,16 @@ import sys
 sys.path.append('first-order-model/')
     
 import demo
+
+def download_fille(url, filename):
+    cs = 1024
+    req = requests.get(url, stream=True)
+    with open(filename, 'wb') as f:
+        prog = tqdm.tqdm(unit="B", total=int(req.headers['Content-Length'] ))
+        for chunk in req.iter_content(chunk_size=cs): 
+            if chunk: # filter out keep-alive new chunks
+                prog.update(len(chunk))
+                f.write(chunk)
 
 def dl_srcs():
     #credit https://gist.github.com/gruber/249502
@@ -61,33 +72,31 @@ def dl_srcs():
     soup = BeautifulSoup(result.content, 'html.parser')
 
     div_tag = soup.find_all("div", class_="download_link")
+    
     cpks_link = re.findall(regex, str(div_tag[0].contents))[0][0]
 
     src_vid_link = "https://cdn.discordapp.com/attachments/758371620531732531/759935503041560576/bakamitai_template.mp4"
 
     src_aud_link = "https://cdn.discordapp.com/attachments/758371620531732531/759696211157581844/dmdn.mp3"
 
+    # CHECKPOINTS
+    print("Downloading checkpoints...")
     if not os.path.isfile("vox-cpk.pth.tar"):
-        print("Downloading checkpoints...")
-        with open("vox-cpk.pth.tar", "wb") as f:
-            cpk_fille = requests.get(cpks_link, allow_redirects=True)
-            f.write(cpk_fille.content)
+        download_fille(cpks_link, "vox-cpk.pth.tar")
     else:
         print("Checkpoints are already downloaded.")
 
+    # TEMPLATE VIDEO
+    print("Downloading template video...")
     if not os.path.isfile("bakamitai_template.mp4"):
-        print("Downloading template video...")
-        with open("bakamitai_template.mp4", "wb") as f:
-            src_vid_fille = requests.get(src_vid_link, allow_redirects=True)
-            f.write(src_vid_fille.content)
+        download_fille(src_vid_link, "bakamitai_template.mp4")
     else:
         print("Template is already downloaded.")
         
+    # BAKA MITAI AUDIO
+    print("Downloading Baka Mitai audio...")
     if not os.path.isfile("dmdn.mp3"):
-        print("Downloading Baka Mitai audio...")
-        with open("dmdn.mp3", "wb") as f:
-            src_aud_fille = requests.get(src_aud_link, allow_redirects=True)
-            f.write(src_aud_fille.content)
+        download_fille(src_aud_link, "dmdn.mp3")
     else:
         print("Baka Mitai audio is already downloaded.")
         
