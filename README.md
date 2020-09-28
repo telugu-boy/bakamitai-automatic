@@ -1,5 +1,5 @@
 # bakamitai-automatic
-Automatic baka mitai generator
+Generates a Baka Mitai meme from an input image
 
 ## Google Colab (faster)
  1. https://colab.research.google.com/drive/1kUKt-MJ8ThEkqWsiLwRmEJOIdwqwbzyr?usp=sharing
