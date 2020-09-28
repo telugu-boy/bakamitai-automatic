@@ -154,7 +154,7 @@ if not os.path.isfile("generated.mp4"):
 else:
     print("File named 'generated.mp4' already exists. Continuing.")
 
-print("Speeding up video...")
+print("Adding Baka Mitai audio...")
 #speed up 3x while keeping frames and add audio
 os.system("""ffmpeg -hide_banner -loglevel error -y -i generated.mp4 -i dmdn.mp3 -filter_complex "fps=60, setpts=1/3*PTS[v]" -map [v] -map 1:a:0 ../result.mp4""")
 
