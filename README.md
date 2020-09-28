@@ -15,7 +15,7 @@ Automatic baka mitai generator
 
 ## Local (slower)
   ## Prerequisites
-   * Linux with `git`, `ffmpeg` and `python3` (version 3.7 or above) installed
+   * `git`, `ffmpeg` and `python3` (version 3.7 or above) installed and added to `PATH`
    * Nvidia GPU (optional)
 
   ## Running the program
