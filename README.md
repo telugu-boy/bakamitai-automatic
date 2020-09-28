@@ -15,7 +15,7 @@ Generates a Baka Mitai meme from an input image
 
 ## Local (slower)
   ## Prerequisites
-   * `git`, `ffmpeg` and `python3` (version 3.7 or above) installed and added to `PATH`
+   * `git`, `ffmpeg` and `python3` (version 3.7 is guaranteed to work) installed and added to `PATH`
    * Nvidia GPU (optional)
 
   ## Running the program
