@@ -4,7 +4,7 @@ Generates a Baka Mitai meme from an input image
 ## Google Colab (faster)
  1. https://colab.research.google.com/drive/1kUKt-MJ8ThEkqWsiLwRmEJOIdwqwbzyr?usp=sharing
  2. Ensure the runtime type is `GPU`.
- 3. Press run on each button **except the last one**, in order.
+ 3. Press run on each button **except the second last one**, in order.
     * Wait for previous execution to finish before pressing the next button.
     * Ignore non-fatal warnings or errors. Report fatal errors via the Issues tab.
  4. Navigate to the folder named `bakamitai-automatic` in your Google Drive.
