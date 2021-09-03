@@ -9,6 +9,6 @@ python3 -m venv venv
 source venv/bin/activate
 
 printf "Installing packages to venv...\n"
-python3 -m pip install -q PyYAML==5.3.1 beautifulsoup4 requests imageio matplotlib numpy==1.19.3 pandas scikit-image scikit-learn torch torchvision imageio-ffmpeg tqdm
+python3 -m pip install -q PyYAML==5.3.1 beautifulsoup4 requests imageio matplotlib numpy==1.19.3 pandas==1.2.5 scikit-image scikit-learn torch torchvision imageio-ffmpeg tqdm
 
 python3 ../generate.py
